@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col">  
+            <!-- Table -->
+            <h2>Purchase Materials Table</h2>
+            <table class="table table-bordered table-dark table-md">
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Division</th>
+                        <th>Opec</th>
+                        <th>Item No.</th>
+                        <th>Item Name</th>
+                        <th>On Hand</th>
+                        <th>Main Warehouse</th>
+                        <th>Main Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor ="let purchasing of purchasingList">
+                        <td style="text-align:center">{{purchasing!.place}}</td>
+                        <td style="text-align:center">{{purchasing!.division}}</td>
+                        <td style="text-align:center">{{purchasing!.opec}}</td>
+                        <td style="text-align:center">{{purchasing!.itemNo}}</td>
+                        <td style="text-align:center">{{purchasing!.itemName}}</td>
+                        <td style="text-align:center">{{purchasing!.onHand}}</td>
+                        <td style="text-align:center">{{purchasing!.mainWarehouse}}</td>
+                        <td style="text-align:center">{{purchasing!.mainLocation}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<form>
+    <button class="primary" type="button" [routerLink]="['/purchase-card']">Purchase-Card</button>
+</form>
+
+
+
