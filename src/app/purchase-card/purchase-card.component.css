@@ -1,4 +1,4 @@
-.listing {
+.cards {
   background: var(--accent-color);
   border-radius: 30px;
   padding-bottom: 30px;
@@ -25,3 +25,11 @@ section.listing a::after {
   content: "\203A";
   margin-left: 5px;
 }
+
+.example-card {
+  max-width: 400px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+

@@ -2,11 +2,16 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Purchasingmaterials } from '../purchasingmaterials';
 import { PurchasingService } from '../purchasing.service';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
+import { PurchaseHomeComponent } from '../purchase-home/purchase-home.component';
 
 @Component({
   selector: 'app-purchase-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,MatCardModule,MatGridListModule,FlexLayoutModule,RouterModule,PurchaseHomeComponent],
   templateUrl: './purchase-card.component.html',
   styleUrls: ['./purchase-card.component.css']
 })

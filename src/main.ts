@@ -5,7 +5,14 @@ import { provideRouter } from '@angular/router';
 import routeConfig from './app/routes';
 import { HttpClientModule } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 bootstrapApplication(AppComponent,
-  {providers: [provideProtractorTestingSupport(), provideRouter(routeConfig), importProvidersFrom(HttpClientModule)]})
-  .catch(err => console.error(err));
+  {providers: [
+    provideProtractorTestingSupport(), 
+    provideRouter(routeConfig), 
+    importProvidersFrom(HttpClientModule), 
+    provideAnimations()
+  ]
+}
+).catch(err => console.error(err));

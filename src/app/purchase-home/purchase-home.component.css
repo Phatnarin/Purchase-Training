@@ -1,0 +1,8 @@
+.form-group {
+    color: var(--primary-color);
+    padding: 10px 50px 0 50px;
+  }
+  .container {
+    padding: 16px;
+    background-color: white;
+  }

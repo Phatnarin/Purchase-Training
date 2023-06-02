@@ -1,14 +1,22 @@
-
-
-<section class="listing " *ngFor ="let purchasing of purchasingList">
-    <img class="listing-photo" src="/assets/bearing.jpg">
-    <p class="listing-heading">place :{{ purchasing!.place}}</p>
-    <p class="listing-heading">division :{{ purchasing!.division}}</p>
-    <p class="listing-heading">opec :{{ purchasing!.opec}}</p>
-    <p class="listing-heading">itemNo :{{ purchasing!.itemNo}}</p>
-    <p class="listing-heading">itemName :{{ purchasing!.itemName}}</p>
-    <p class="listing-heading">onHand :{{ purchasing!.onHand}}</p>
-    <p class="listing-heading">mainWarehouse :{{ purchasing!.mainWarehouse}}</p>
-    <p class="listing-heading">mainLocation :{{ purchasing!.mainLocation}}</p>
-</section>
+<app-purchase-home></app-purchase-home>
+<div fxLayout='row wap' fxLayoutGap="50px" layout-align="center center">
+    <mat-card class="example-card" *ngFor ="let purchasing of purchasingList">
+        <mat-card-header>
+            <h4>Purchase Materials</h4>
+        </mat-card-header>
+        <img mat-card-image src="/assets/bearing.jpg">
+        <mat-card-content>
+            <section class="listing ">
+            <p class="listing-heading">place :{{ purchasing!.place}}</p>
+            <p class="listing-heading">division :{{ purchasing!.division}}</p>
+            <p class="listing-heading">opec :{{ purchasing!.opec}}</p>
+            <p class="listing-heading">itemNo :{{ purchasing!.itemNo}}</p>
+            <p class="listing-heading">itemName :{{ purchasing!.itemName}}</p>
+            <p class="listing-heading">onHand :{{ purchasing!.onHand}}</p>
+            <p class="listing-heading">mainWarehouse :{{ purchasing!.mainWarehouse}}</p>
+            <p class="listing-heading">mainLocation :{{ purchasing!.mainLocation}}</p>
+            </section>
+        </mat-card-content>
+    </mat-card>
+</div>
 

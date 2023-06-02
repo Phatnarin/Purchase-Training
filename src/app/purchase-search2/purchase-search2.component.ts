@@ -1,22 +1,23 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PurchasingService } from '../purchasing.service';
 import { Purchasingmaterials } from '../purchasingmaterials';
-import { PurchaseCardComponent } from '../purchase-card/purchase-card.component';
+import { PurchasingService } from '../purchasing.service';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { PurchaseHomeComponent } from '../purchase-home/purchase-home.component';
-
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-purchase',
+  selector: 'app-purchase-search2',
   standalone: true,
-  imports: [CommonModule,PurchaseCardComponent,RouterModule,PurchaseHomeComponent],
-  templateUrl: './purchase.component.html',
-  styleUrls: ['./purchase.component.css']
+  imports: [CommonModule,MatCardModule,MatGridListModule,FlexLayoutModule,RouterModule,PurchaseHomeComponent,FormsModule],
+  templateUrl: './purchase-search2.component.html',
+  styleUrls: ['./purchase-search2.component.css']
 })
-export class PurchaseComponent {
-  
+export class PurchaseSearch2Component {
+
   purchasingService: PurchasingService = inject(PurchasingService);
   purchasingList: Purchasingmaterials[] = [];
 
@@ -31,7 +32,7 @@ export class PurchaseComponent {
     mainLocation: ''
   }
 
-  GetPurchaseMaterials(): void {
+  Search(): void {
     if (this.product.itemNo == ""){
       this.product.itemNo = "All";
     }
@@ -39,8 +40,10 @@ export class PurchaseComponent {
       this.purchasingList = purchasingList;
     });
   }
+
+
   constructor() {
     this.product.itemNo = "All";
-    this.GetPurchaseMaterials();
-}
+    this.Search();
+  }
 }
