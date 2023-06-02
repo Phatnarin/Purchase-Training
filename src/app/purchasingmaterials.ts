@@ -1,10 +1,13 @@
 export interface Purchasingmaterials {
-    place: string,
-    division: string,
-    opec: string,
-    itemNo: string,
-    itemName: string,
-    onHand: number,
-    mainWarehouse: string,
-    mainLocation: string
+    processCode: string,
+    process: string,
+    partType: string,
+    groupPart: string,
+    shift: string,
+    machine: string,
+    date: string,
+    quantity: number,
+    target: number,
+    accum: number,
+    targetAccum: number
 }

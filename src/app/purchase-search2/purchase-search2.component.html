@@ -4,26 +4,50 @@
         <div class="row">
             <div class="col">
                 <div class="form group col-20">
-                    <label for="place" class="form-label">Place</label>
-                    <input type="text" class="form-control" id="place" name="place"
-                        [(ngModel)]="product.place" />
+                    <label for="companyCode" class="form-label">Company Code</label>
+                    <input type="text" class="form-control" id="companyCode" name="companyCode"
+                        [(ngModel)]="product.companyCode" />
                 </div>
                 <div class="form group col-20">
-                    <label for="division" class="form-label">Division</label>
-                    <input type="text" class="form-control" id="division" name="division"
-                        [(ngModel)]="product.division" />
+                    <label for="date" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="date" name="date"
+                        [(ngModel)]="product.date" />
                 </div>
             </div>
             <div class="col">
                 <div class="form group col-20">
-                    <label for="opec" class="form-label">Opec</label>
-                    <input type="text" class="form-control" id="opec" name="opec"
-                        [(ngModel)]="product.opec" />
+                    <label for="ToDate" class="form-label">To Date</label>
+                    <input type="text" class="form-control" id="ToDate" name="ToDate"
+                        [(ngModel)]="product.ToDate" />
                 </div>
                 <div class="form group col-20">
-                    <label for="itemNo" class="form-label">Item No</label>
-                    <input type="text" class="form-control" id="itemNo" name="itemNo"
-                        [(ngModel)]="product.itemNo" />
+                    <label for="Processes" class="form-label">Processes</label>
+                    <input type="text" class="form-control" id="Processes" name="Processes"
+                        [(ngModel)]="product.Processes" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form group col-20">
+                    <label for="PartTypes" class="form-label">Part Types</label>
+                    <input type="text" class="form-control" id="PartTypes" name="PartTypes"
+                        [(ngModel)]="product.PartTypes" />
+                </div>
+                <div class="form group col-20">
+                    <label for="GroupParts" class="form-label">Group Parts</label>
+                    <input type="text" class="form-control" id="GroupParts" name="GroupParts"
+                        [(ngModel)]="product.GroupParts" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form group col-20">
+                    <label for="Machines" class="form-label">Machines</label>
+                    <input type="text" class="form-control" id="Machines" name="Machines"
+                        [(ngModel)]="product.Machines" />
+                </div>
+                <div class="form group col-20">
+                    <label for="by" class="form-label">By</label>
+                    <input type="text" class="form-control" id="by" name="by"
+                        [(ngModel)]="product.by" />
                 </div>
             </div>
         </div>
@@ -38,15 +62,18 @@
         <img mat-card-image src="/assets/bearing.jpg">
         <mat-card-content>
             <section class="listing ">
-            <p class="listing-heading">place :{{ purchasing!.place}}</p>
-            <p class="listing-heading">division :{{ purchasing!.division}}</p>
-            <p class="listing-heading">opec :{{ purchasing!.opec}}</p>
-            <p class="listing-heading">itemNo :{{ purchasing!.itemNo}}</p>
-            <p class="listing-heading">itemName :{{ purchasing!.itemName}}</p>
-            <p class="listing-heading">onHand :{{ purchasing!.onHand}}</p>
-            <p class="listing-heading">mainWarehouse :{{ purchasing!.mainWarehouse}}</p>
-            <p class="listing-heading">mainLocation :{{ purchasing!.mainLocation}}</p>
-            </section>
+                <p class="listing-heading">processCode :{{ purchasing!.processCode}}</p>
+                <p class="listing-heading">process :{{ purchasing!.process}}</p>
+                <p class="listing-heading">partType :{{ purchasing!.partType}}</p>
+                <p class="listing-heading">groupPart:{{ purchasing!.groupPart}}</p>
+                <p class="listing-heading">shift :{{ purchasing!.shift}}</p>
+                <p class="listing-heading">machine:{{ purchasing!.machine}}</p>
+                <p class="listing-heading">date :{{ purchasing!.date}}</p>
+                <p class="listing-heading">quantity :{{ purchasing!.quantity}}</p>
+                <p class="listing-heading">target:{{ purchasing!.target}}</p>
+                <p class="listing-heading">accum :{{ purchasing!.accum}}</p>
+                <p class="listing-heading">targetAccum :{{ purchasing!.targetAccum}}</p>
+                </section>
         </mat-card-content>
     </mat-card>
 </div>

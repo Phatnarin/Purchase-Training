@@ -2,34 +2,39 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>Purchase Materials Table</h2>
+            <h2>Production Result Summary Table</h2>
             <table class="table table-bordered table-dark table-md">
                 <thead>
                     <tr>
-                        <th>Place</th>
-                        <th>Division</th>
-                        <th>Opec</th>
-                        <th>Item No.</th>
-                        <th>Item Name</th>
-                        <th>On Hand</th>
-                        <th>Main Warehouse</th>
-                        <th>Main Location</th>
+                        <th>Process Code</th>
+                        <th>Process</th>
+                        <th>Part Type</th>
+                        <th>Group Part</th>
+                        <th>Shift</th>
+                        <th>Machine</th>
+                        <th>Date</th>
+                        <th>Quantity</th>
+                        <th>Target</th>
+                        <th>Accum</th>
+                        <th>Target Accum</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor ="let purchasing of purchasingList">
-                        <td style="text-align:center">{{purchasing!.place}}</td>
-                        <td style="text-align:center">{{purchasing!.division}}</td>
-                        <td style="text-align:center">{{purchasing!.opec}}</td>
-                        <td style="text-align:center">{{purchasing!.itemNo}}</td>
-                        <td style="text-align:center">{{purchasing!.itemName}}</td>
-                        <td style="text-align:center">{{purchasing!.onHand}}</td>
-                        <td style="text-align:center">{{purchasing!.mainWarehouse}}</td>
-                        <td style="text-align:center">{{purchasing!.mainLocation}}</td>
+                    <tr *ngFor="let purchasing of purchasingList">
+                        <td style="text-align:center">{{purchasing!.processCode}}</td>
+                        <td style="text-align:center">{{purchasing!.process}}</td>
+                        <td style="text-align:center">{{purchasing!.partType}}</td>
+                        <td style="text-align:center">{{purchasing!.groupPart}}</td>
+                        <td style="text-align:center">{{purchasing!.shift}}</td>
+                        <td style="text-align:center">{{purchasing!.machine}}</td>
+                        <td style="text-align:center">{{purchasing!.date}}</td>
+                        <td style="text-align:center">{{purchasing!.quantity}}</td>
+                        <td style="text-align:center">{{purchasing!.target}}</td>
+                        <td style="text-align:center">{{purchasing!.accum}}</td>
+                        <td style="text-align:center">{{purchasing!.targetAccum}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-

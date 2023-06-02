@@ -2,19 +2,22 @@
 <div fxLayout='row wap' fxLayoutGap="50px" layout-align="center center">
     <mat-card class="example-card" *ngFor ="let purchasing of purchasingList">
         <mat-card-header>
-            <h4>Purchase Materials</h4>
+            <h4>Production Result Summary Card</h4>
         </mat-card-header>
         <img mat-card-image src="/assets/bearing.jpg">
         <mat-card-content>
             <section class="listing ">
-            <p class="listing-heading">place :{{ purchasing!.place}}</p>
-            <p class="listing-heading">division :{{ purchasing!.division}}</p>
-            <p class="listing-heading">opec :{{ purchasing!.opec}}</p>
-            <p class="listing-heading">itemNo :{{ purchasing!.itemNo}}</p>
-            <p class="listing-heading">itemName :{{ purchasing!.itemName}}</p>
-            <p class="listing-heading">onHand :{{ purchasing!.onHand}}</p>
-            <p class="listing-heading">mainWarehouse :{{ purchasing!.mainWarehouse}}</p>
-            <p class="listing-heading">mainLocation :{{ purchasing!.mainLocation}}</p>
+            <p class="listing-heading">processCode :{{ purchasing!.processCode}}</p>
+            <p class="listing-heading">process :{{ purchasing!.process}}</p>
+            <p class="listing-heading">partType :{{ purchasing!.partType}}</p>
+            <p class="listing-heading">groupPart:{{ purchasing!.groupPart}}</p>
+            <p class="listing-heading">shift :{{ purchasing!.shift}}</p>
+            <p class="listing-heading">machine:{{ purchasing!.machine}}</p>
+            <p class="listing-heading">date :{{ purchasing!.date}}</p>
+            <p class="listing-heading">quantity :{{ purchasing!.quantity}}</p>
+            <p class="listing-heading">target:{{ purchasing!.target}}</p>
+            <p class="listing-heading">accum :{{ purchasing!.accum}}</p>
+            <p class="listing-heading">targetAccum :{{ purchasing!.targetAccum}}</p>
             </section>
         </mat-card-content>
     </mat-card>

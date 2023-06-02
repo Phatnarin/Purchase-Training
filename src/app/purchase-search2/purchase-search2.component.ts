@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { PurchaseHomeComponent } from '../purchase-home/purchase-home.component';
 import { FormsModule } from '@angular/forms';
+import { ProductionResultSummary } from '../ProductionResultSummary';
 
 @Component({
   selector: 'app-purchase-search2',
@@ -21,21 +22,18 @@ export class PurchaseSearch2Component {
   purchasingService: PurchasingService = inject(PurchasingService);
   purchasingList: Purchasingmaterials[] = [];
 
-  product: Purchasingmaterials = {
-    place: 'T3',
-    division: '71',
-    opec: 'DZ',
-    itemNo: 'All',
-    itemName: '',
-    onHand: 0,
-    mainWarehouse: '',
-    mainLocation: ''
+  product: ProductionResultSummary = {
+    companyCode: 'B',
+    date: '20230601',
+    ToDate: '',
+    Processes: '',
+    PartTypes: '',
+    GroupParts: '',
+    Machines: '',
+    by: ''
   }
 
   Search(): void {
-    if (this.product.itemNo == ""){
-      this.product.itemNo = "All";
-    }
     this.purchasingService.getPurchaseMaterials(this.product).subscribe((purchasingList: Purchasingmaterials[]) => {
       this.purchasingList = purchasingList;
     });
@@ -43,7 +41,6 @@ export class PurchaseSearch2Component {
 
 
   constructor() {
-    this.product.itemNo = "All";
     this.Search();
   }
 }

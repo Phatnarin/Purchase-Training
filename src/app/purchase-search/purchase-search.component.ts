@@ -6,6 +6,7 @@ import { PurchasingService } from '../purchasing.service';
 import { Purchasingmaterials } from '../purchasingmaterials';
 import { PurchaseHomeComponent } from '../purchase-home/purchase-home.component';
 import { FormsModule } from '@angular/forms';
+import { ProductionResultSummary } from '../ProductionResultSummary';
 
 
 @Component({
@@ -19,26 +20,23 @@ export class PurchaseSearchComponent {
   purchasingService: PurchasingService = inject(PurchasingService);
   purchasingList: Purchasingmaterials[] = [];
 
-  product: Purchasingmaterials = {
-    place: 'T3',
-    division: '71',
-    opec: 'DZ',
-    itemNo: 'All',
-    itemName: '',
-    onHand: 0,
-    mainWarehouse: '',
-    mainLocation: ''
+  product: ProductionResultSummary = {
+    companyCode: 'B',
+    date: '20230601',
+    ToDate: '',
+    Processes: '',
+    PartTypes: '',
+    GroupParts: '',
+    Machines: '',
+    by: ''
   }
+  
   Search(): void {
-    if (this.product.itemNo == ""){
-      this.product.itemNo = "All";
-    }
     this.purchasingService.getPurchaseMaterials(this.product).subscribe((purchasingList: Purchasingmaterials[]) => {
       this.purchasingList = purchasingList;
     });
   }
   constructor() {
-    this.product.itemNo = "All";
     this.Search();
 }
 }

@@ -4,26 +4,50 @@
         <div class="row">
             <div class="col">
                 <div class="form group col-20">
-                    <label for="place" class="form-label">Place</label>
-                    <input type="text" class="form-control" id="place" name="place"
-                        [(ngModel)]="product.place" />
+                    <label for="companyCode" class="form-label">Company Code</label>
+                    <input type="text" class="form-control" id="companyCode" name="companyCode"
+                        [(ngModel)]="product.companyCode" />
                 </div>
                 <div class="form group col-20">
-                    <label for="division" class="form-label">Division</label>
-                    <input type="text" class="form-control" id="division" name="division"
-                        [(ngModel)]="product.division" />
+                    <label for="date" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="date" name="date"
+                        [(ngModel)]="product.date" />
                 </div>
             </div>
             <div class="col">
                 <div class="form group col-20">
-                    <label for="opec" class="form-label">Opec</label>
-                    <input type="text" class="form-control" id="opec" name="opec"
-                        [(ngModel)]="product.opec" />
+                    <label for="ToDate" class="form-label">To Date</label>
+                    <input type="text" class="form-control" id="ToDate" name="ToDate"
+                        [(ngModel)]="product.ToDate" />
                 </div>
                 <div class="form group col-20">
-                    <label for="itemNo" class="form-label">Item No</label>
-                    <input type="text" class="form-control" id="itemNo" name="itemNo"
-                        [(ngModel)]="product.itemNo" />
+                    <label for="Processes" class="form-label">Processes</label>
+                    <input type="text" class="form-control" id="Processes" name="Processes"
+                        [(ngModel)]="product.Processes" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form group col-20">
+                    <label for="PartTypes" class="form-label">Part Types</label>
+                    <input type="text" class="form-control" id="PartTypes" name="PartTypes"
+                        [(ngModel)]="product.PartTypes" />
+                </div>
+                <div class="form group col-20">
+                    <label for="GroupParts" class="form-label">Group Parts</label>
+                    <input type="text" class="form-control" id="GroupParts" name="GroupParts"
+                        [(ngModel)]="product.GroupParts" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form group col-20">
+                    <label for="Machines" class="form-label">Machines</label>
+                    <input type="text" class="form-control" id="Machines" name="Machines"
+                        [(ngModel)]="product.Machines" />
+                </div>
+                <div class="form group col-20">
+                    <label for="by" class="form-label">By</label>
+                    <input type="text" class="form-control" id="by" name="by"
+                        [(ngModel)]="product.by" />
                 </div>
             </div>
         </div>
@@ -37,26 +61,32 @@
             <table class="table table-bordered table-dark table-md">
                 <thead>
                     <tr>
-                        <th>Place</th>
-                        <th>Division</th>
-                        <th>Opec</th>
-                        <th>Item No.</th>
-                        <th>Item Name</th>
-                        <th>On Hand</th>
-                        <th>Main Warehouse</th>
-                        <th>Main Location</th>
+                        <th>Process Code</th>
+                        <th>Process</th>
+                        <th>Part Type</th>
+                        <th>Group Part</th>
+                        <th>Shift</th>
+                        <th>Machine</th>
+                        <th>Date</th>
+                        <th>Quantity</th>
+                        <th>Target</th>
+                        <th>Accum</th>
+                        <th>Target Accum</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor ="let purchasing of purchasingList">
-                        <td style="text-align:center">{{purchasing!.place}}</td>
-                        <td style="text-align:center">{{purchasing!.division}}</td>
-                        <td style="text-align:center">{{purchasing!.opec}}</td>
-                        <td style="text-align:center">{{purchasing!.itemNo}}</td>
-                        <td style="text-align:center">{{purchasing!.itemName}}</td>
-                        <td style="text-align:center">{{purchasing!.onHand}}</td>
-                        <td style="text-align:center">{{purchasing!.mainWarehouse}}</td>
-                        <td style="text-align:center">{{purchasing!.mainLocation}}</td>
+                        <td style="text-align:center">{{purchasing!.processCode}}</td>
+                        <td style="text-align:center">{{purchasing!.process}}</td>
+                        <td style="text-align:center">{{purchasing!.partType}}</td>
+                        <td style="text-align:center">{{purchasing!.groupPart}}</td>
+                        <td style="text-align:center">{{purchasing!.shift}}</td>
+                        <td style="text-align:center">{{purchasing!.machine}}</td>
+                        <td style="text-align:center">{{purchasing!.date}}</td>
+                        <td style="text-align:center">{{purchasing!.quantity}}</td>
+                        <td style="text-align:center">{{purchasing!.target}}</td>
+                        <td style="text-align:center">{{purchasing!.accum}}</td>
+                        <td style="text-align:center">{{purchasing!.targetAccum}}</td>
                     </tr>
                 </tbody>
             </table>
