@@ -1,9 +1,9 @@
-
-<div class="container">
-    <button class="btn btn-primary" type="button" [routerLink]="['/purchase']">Purchase-Table</button>
-    <button class="btn btn-warning" type="button" [routerLink]="['/purchase-card']">Purchase-Card</button>
-    <button class="btn btn-primary" type="button" [routerLink]="['/purchase-Search']">Purchase-Search</button>
-    <button class="btn btn-primary" type="button" [routerLink]="['/purchase-Search2']">Purchase-Search</button>
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+        <a [routerLink]="['/purchase']">Purchase-Table</a>
+        <a [routerLink]="['/purchase-card']">Purchase-Card</a>
+        <a [routerLink]="['/purchase-Search']">Purchase-Search</a>
+        <a [routerLink]="['/purchase-Search2']">Purchase-Search2</a>
+    </div>
 </div>
-
-
